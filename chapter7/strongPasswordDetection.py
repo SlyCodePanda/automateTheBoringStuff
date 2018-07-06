@@ -4,7 +4,6 @@
 import re
 
 password = input()
-# password = "tfgsYiop1"
 print("password = " + password)
 
 # Regex that detects whether the password is strong.
