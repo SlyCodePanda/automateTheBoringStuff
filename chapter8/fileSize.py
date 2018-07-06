@@ -28,9 +28,12 @@ for filename in directory :
 	# Uses 'os.path.join()' to join the folder name with the current filename.
 	totalSize = totalSize + os.path.getsize(os.path.join(givenDir, filename))
 
-# Round up to 2 decimal places for Megabyte conversion.
+# Round up to 2 decimal places for megabyte conversion.
 mb = str(round(totalSize/1024/1024, 2))
+# Round up to 2 decimal places for gigabyte conversion.
+gb = str(round(totalSize/1024/1024/1024, 2))
 
 print('Size of ' + givenDir + ' :')
 print(str(totalSize) + ' bytes')
 print(str(mb) + ' megabytes')
+print(str(gb) + ' gigabyes')
