@@ -1,5 +1,7 @@
 #! python3
-# addPrefix.py - Lets you add a prefix to all files in a given directory (Only currently tested on Windows). 
+# addPrefix.py - Lets you add a prefix to all files in a given directory (Works in Windows and Linux). 
+
+# TO ADD : Add a check to ask if the user wants to follow through with changing the names of the files.
 
 import os, shutil
 
