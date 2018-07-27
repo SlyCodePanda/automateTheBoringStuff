@@ -16,18 +16,21 @@ def selectiveCopy(folder) :
 	# Check if pythonScripts folder already exists. If it doesn't, create it.
 	if not os.path.exists(dest) :
 		os.makedirs(os.path.dirname(dest))
-		print('Creating scripts folder here: %s' % dest ) 
+		print('Creating scripts file here: %s' % dest ) 
 
 	# Walk the given folder structure to find the files with the extension.
 	for foldername, subfolders, filenames in os.walk(folder) :
+		print('Currently looking at folder: %s' % foldername)
+		print('Found subfolders: %s' % subfolders)
+
 		for filename in filenames :
 			# If a file with the given extension is found, copy it to pythonScripts folder.
 			if filename.endswith(extension) :
 				print('Python script found! : %s' % filename)
-				# Copy those files the pythonScripts folder.
+				# TODO: Copy those files, and paste them into a new folder.
 				copyTo = dest + filename
 				shutil.copy(filename, copyTo)
 
 
-# Currently set to search through the current directory (chapter9 folder).
+# Currently set to search through the current directory.
 selectiveCopy('.')
