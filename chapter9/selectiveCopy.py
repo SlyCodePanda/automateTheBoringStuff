@@ -4,7 +4,6 @@
 
 import os, shutil
 
-# TODO: Get the folder you want to search through.
 def selectiveCopy(folder) :
 
 	folder = os.path.abspath(folder) # Make sure the folder is absolute.
